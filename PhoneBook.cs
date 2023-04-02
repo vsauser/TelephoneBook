@@ -6,7 +6,7 @@ public class PhoneBook
     public void addContact()
     {
         contactClass.firstName = Console.ReadLine();
-        listContacts.Add(contactClass.firstName);
+        listContacts.Add(contactClass);
 
     }
 
@@ -17,6 +17,7 @@ public class PhoneBook
 
     public void searchContact()
     {
+        
         
     }
 }
