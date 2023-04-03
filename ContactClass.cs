@@ -1,10 +1,13 @@
 public class ContactClass
 {
-    public string firstName;
-    public string secondName;
-    public string thirdName;
-    public string telephoneNumber;
-    public string email;
-    public int index;
+    public string Name {get; set;}
+    public int TelephoneNumber {get; set;}
+    public string Email {get; set;}
+    public int Index {get; set;}
+
+    public ContactClass()
+    {
+       Index = IncrementClass.GetIndex();
+    }
 
 }

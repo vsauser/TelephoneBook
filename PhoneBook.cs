@@ -1,17 +1,22 @@
 public class PhoneBook
 {
     List<ContactClass> listContacts = new List<ContactClass>();
-    ContactClass contactClass = new ContactClass();
 
-    public void addContact()
+    public void addContact(string name, int telephoneNumber, string email)
     {
-        contactClass.firstName = Console.ReadLine();
-        listContacts.Add(contactClass);
+        ContactClass contact = new ContactClass();
+        contact.Name = name;
+        contact.TelephoneNumber = telephoneNumber;
+        contact.Email = email;
+
+        listContacts.Add(contact);
 
     }
 
-    public void deleteContact()
+    public void deleteContact(int index)
     {
+        var contact = listContacts.FirstOrDefault(x => x.Index == index);
+        listContacts.Remove(contact);
         
     }
 
